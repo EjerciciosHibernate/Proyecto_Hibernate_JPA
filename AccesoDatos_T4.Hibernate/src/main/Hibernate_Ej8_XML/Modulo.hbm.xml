@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19-nov-2019 13:23:38 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="HibernateEj8_modelo.Modulo" table="MODULO">
+        <id name="id" type="int">
+            <column name="modulo_id" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="java.lang.String">
+            <column name="NOMBRE" />
+        </property>
+        <property name="creditos" type="float">
+            <column name="CREDITOS" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19-nov-2019 13:23:38 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class name="HibernateEj3XML_modelo.Profesor" table="PROFESORFK">
+		<id name="id" type="int">
+			<column name="Id" />
+			<generator class="identity" />
+		</id>
+		<property name="nombre" type="java.lang.String">
+			<column name="NOMBRE" />
+		</property>
+		<property name="ape1" type="java.lang.String">
+			<column name="APE1" />
+		</property>
+		<property name="ape2" type="java.lang.String">
+			<column name="APE2" />
+		</property>
+		<!-- una asoc. 1-1 de clave foránea se modela como many-to-one con unique 
+			a true -->
+		<!-- Muy importante poner cascade=all sino nos da error de cargo nulo al 
+			guardar el empleado -->
+		<many-to-one name="direccion" column="direccion_id" unique="true" cascade="all" not-null="true" />
+	</class>
+</hibernate-mapping>
